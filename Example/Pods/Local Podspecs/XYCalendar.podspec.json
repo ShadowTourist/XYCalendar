@@ -1,0 +1,22 @@
+{
+  "name": "XYCalendar",
+  "version": "0.1.0",
+  "summary": "A short description of XYCalendar.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dizzle0722@163.com/XYCalendar",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dizzle0722@163.com": "dizzle0722@163.com"
+  },
+  "source": {
+    "git": "https://github.com/dizzle0722@163.com/XYCalendar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "XYCalendar/Classes/**/*"
+}

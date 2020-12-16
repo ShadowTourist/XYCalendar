@@ -1,0 +1,16 @@
+PODS:
+  - XYCalendar (0.1.0)
+
+DEPENDENCIES:
+  - XYCalendar (from `../`)
+
+EXTERNAL SOURCES:
+  XYCalendar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XYCalendar: 8c8741635aab5d7132db4184ce17c4c6f8dfcc99
+
+PODFILE CHECKSUM: b0938589b0f98ef10467933cc9d719174df8c211
+
+COCOAPODS: 1.10.0

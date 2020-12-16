@@ -1,0 +1,6 @@
+framework module XYCalendar {
+  umbrella header "XYCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}
