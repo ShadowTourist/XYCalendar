@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.author           = { 'xiaoyu.liu' => 'dizzle0722@163.com' }
   s.source           = { :git => 'https://github.com/ShadowTourist/XYCalendar.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
-  s.source_files = 'XYCalendar/Classes/**/*'
+  s.source_files = 'XYCalendar/**/*'
   s.frameworks = 'Foundation', 'UIKit'
 end

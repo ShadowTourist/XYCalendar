@@ -11,7 +11,7 @@
 		3DBEA3CB0C69863CF38C4F685ACC0EC9 /* Pods-XYCalendar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F994E08821092CC3DF8C410007C6C6 /* Pods-XYCalendar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		595FC1B2D36C4EF1A804D677FCBB2E15 /* Pods-XYCalendar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 082EEBEF5F88ABA68C6371B17C36F4ED /* Pods-XYCalendar_Example-dummy.m */; };
 		82A8789CE63ECDFCFB8ECAB2F7773A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		89EA56862589D93D000D279A /* XYCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA56852589D93D000D279A /* XYCalendar.swift */; };
+		890F07E0258B416300DA66AC /* XYDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F07DF258B416300DA66AC /* XYDatePicker.swift */; };
 		A0554154AFDB42FA2E87B90717D70DE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		ADBA9F098E8906E563ADF051BB8B815E /* Pods-XYCalendar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 984339D58D4CB1915B4C0AE7CC883F2E /* Pods-XYCalendar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCBCC6D86F5E781386F4CA3F9614AD2B /* Pods-XYCalendar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B0379922313E697820728B2272681B /* Pods-XYCalendar_Tests-dummy.m */; };
@@ -51,7 +51,7 @@
 		6FDA5D1CB73EC50D5EA74C960DD4DC87 /* Pods-XYCalendar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XYCalendar_Tests.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		86CFA32FB8D748DCA3C9E5C4DD3437C4 /* XYCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XYCalendar-dummy.m"; sourceTree = "<group>"; };
-		89EA56852589D93D000D279A /* XYCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYCalendar.swift; sourceTree = "<group>"; };
+		890F07DF258B416300DA66AC /* XYDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XYDatePicker.swift; path = XYCalendar/XYDatePicker.swift; sourceTree = "<group>"; };
 		8B3C31A98BF0A3A13EE41E619D6CBA54 /* Pods-XYCalendar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XYCalendar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		90A98F96502546B573DCF394418DD661 /* XYCalendar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XYCalendar-Info.plist"; sourceTree = "<group>"; };
 		984339D58D4CB1915B4C0AE7CC883F2E /* Pods-XYCalendar_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XYCalendar_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		AE3DAF55FBFC96AE0867ABD914954FD9 /* XYCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				89EA56852589D93D000D279A /* XYCalendar.swift */,
+				890F07DF258B416300DA66AC /* XYDatePicker.swift */,
 				621ED96DE5EDB1313B32D907CF644BEB /* Pod */,
 				D25559E4C709521F7601E54991778369 /* Support Files */,
 			);
@@ -317,6 +317,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					2C11DE1025D6C3D23246DEF14272ADCA = {
+						LastSwiftMigration = 1220;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -367,8 +372,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89EA56862589D93D000D279A /* XYCalendar.swift in Sources */,
 				CDD45458D0A268359E5B208A058E5773 /* XYCalendar-dummy.m in Sources */,
+				890F07E0258B416300DA66AC /* XYDatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 017467FFAEE0796B3609351498C450E5 /* XYCalendar.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -429,6 +435,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -539,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D48AFA709E398DED74E5E325621A5DE3 /* XYCalendar.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
